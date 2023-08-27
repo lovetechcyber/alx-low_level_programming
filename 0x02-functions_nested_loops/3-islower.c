@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
  * _islower - Check Holberton
@@ -7,16 +8,11 @@
  * alphabet in lowercase 10 times
  * Return: 1 if is lowercase or 0 if is uppercase
  */
-int _islower(int c)
-{
-	char i;
-	int lower = 0;
-
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		if (i == c)
-			lower = 1;
-	}
-
-	return (lower);
+int _islower(int c) {
+    // Check if the character is within the lowercase ASCII range
+    if (c >= 'a' && c <= 'z') {
+        return 1; // Character is lowercase
+    } else {
+        return 0; // Character is not lowercase
+    }
 }
