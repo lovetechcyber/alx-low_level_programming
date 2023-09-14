@@ -7,8 +7,13 @@
  *
  * Return: no return.
  */
-void print_name(char *name, void (*f)(char *))
-{
-	if (name && f)
-		f(name);
+void custom_print(char *name) {
+    while (*name != '\0') {
+        putchar(*name);
+        name++;
+    }
+}
+
+void print_name(char *name, void (*f)(char *)) {
+    f(name);
 }
